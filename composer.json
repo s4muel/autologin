@@ -1,0 +1,21 @@
+{
+    "name": "veltisan/rapidlogin",
+    "autoload": {
+        "psr-4": {
+            "Veltisan\\RapidLogin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "samuel"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Veltisan\\RapidLogin\\RapidLoginProvider"
+            ]
+        }
+    }
+}

@@ -1,1 +1,1 @@
-# autologin
+# rapidlogin
