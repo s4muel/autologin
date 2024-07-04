@@ -1,5 +1,7 @@
 {
     "name": "veltisan/rapidlogin",
+    "description": "A short description of what your package does",
+
     "autoload": {
         "psr-4": {
             "Veltisan\\RapidLogin\\": "src/"
@@ -10,7 +12,9 @@
             "name": "samuel"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=8.2"
+    },
     "extra": {
         "laravel": {
             "providers": [
