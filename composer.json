@@ -1,6 +1,7 @@
 {
     "name": "veltisan/rapidlogin",
     "description": "A short description of what your package does",
+    "license": "MIT",
 
     "autoload": {
         "psr-4": {
