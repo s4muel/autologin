@@ -5,6 +5,9 @@ return [
 
     'show_close_button' => env('RAPIDLOGIN_SHOW_CLOSE_BUTTON', true),
 
+    'home_route_name' => env('RAPIDLOGIN_HOME_ROUTE_NAME', 'home'),
+
+
     //when empty, first 3 users from database will be used
     'users' => [
         //1 => 'admin',

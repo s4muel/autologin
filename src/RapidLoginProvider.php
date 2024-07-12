@@ -34,7 +34,7 @@ class rapidLoginProvider extends ServiceProvider
             Auth::login($user);
             request()->session()->regenerate();
 
-            return redirect()->route('home');
+            return redirect()->route(config('rapidlogin.home_route_name', 'home'));
         })->middleware('web')
             ->name('rapidlogin.login');
 
