@@ -4,7 +4,7 @@ A Laravel package that enhances developer experience by adding one-click user sw
 ## Installation
 ⚠️ This package is not to be used in production.
 ```
-composer require composer require --dev veltisan/rapidlogin:dev-main
+composer require --dev veltisan/rapidlogin:dev-main
 ```
 
 ## Basic configuration
