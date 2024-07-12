@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Veltisan\RapidLogin\Middleware\InjectRapidLogin;
 
-class rapidLoginProvider extends ServiceProvider
+class RapidLoginProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -21,8 +21,11 @@ class rapidLoginProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/rapidlogin.php' => config_path('rapidlogin.php'),
+        ], 'rapidlogin-config');
+
+        $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/rapidlogin'),
-        ]);
+        ], 'rapidlogin-views');
 
         $this->mergeConfigFrom(__DIR__ . '/../config/rapidlogin.php', 'rapidlogin');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'rapidlogin');
