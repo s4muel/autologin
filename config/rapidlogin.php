@@ -7,18 +7,28 @@ return [
 
     'home_route_name' => env('RAPIDLOGIN_HOME_ROUTE_NAME', 'home'),
 
+    // This allows for easy user setup via the .env file (e.g., RAPIDLOGIN_USERS=1:John Doe,1337:Jane Doe).
+    // When empty, the first 3 users from the database will be used.
+    'users' => str(env('RAPIDLOGIN_USERS'))
+        ->explode(',')
+        ->filter()
+        ->mapWithKeys(function ($item) {
+            [$id, $name] = explode(':', $item);
+            return [$id => $name];
+        })
+        ->toArray(),
 
-    // when empty, first 3 users from database will be used
-    // `key` is the user's `id` in database, and `value` is a string displayed in the button (doesnt have to match with the database)
-    'users' => [
-        //1 => 'admin',
-    ],
+    // If you have published the config file, you may wish to set the users with a simple array.
+    // The `key` is the user's `id` in the database, and the `value` is a string displayed in the button (doesn't have to match the database).
+    //'users' => [
+    //    1 => 'admin',
+    //],
 
     'user_model' => env('RAPIDLOGIN_USER_MODEL', App\Models\User::class),
 
-    // to be used in route model binding
+    // This is used in route model binding.
     'user_route_key_name' => env('RAPIDLOGIN_USER_ROUTE_KEY_NAME', 'id'),
 
-    // examples: 'login', 'login*', ... defaults to '*' to match all routes
+    // Examples: 'login', 'login*', etc. Defaults to '*' to match all routes.
     'route_name_pattern' => env('RAPIDLOGIN_ROUTE_NAME_PATTERN', '*'),
 ];

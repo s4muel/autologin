@@ -8,11 +8,14 @@ composer require --dev veltisan/rapidlogin:dev-main
 ```
 
 ## Basic configuration
-
+Add the following to your `.env` file
 ```
 #bare minimum enable rapidlogin and to show the buttons
 RAPIDLOGIN_ENABLED=true
 
+#to define the users that will be displayed in the buttons (see Users section below)
+#the format is `id:name,id:name,...`
+#RAPIDLOGIN_USERS=1:John Doe,1337:Jane Doe
 
 #set to false to hide the close button from the panel
 #RAPIDLOGIN_SHOW_CLOSE_BUTTON=true
@@ -25,7 +28,9 @@ RAPIDLOGIN_ENABLED=true
 #RAPIDLOGIN_ROUTE_NAME_PATTERN='*'
 ```
 
-By default, rapid login buttons for first 3 users from dabatase will be displayed, if you want to customize the users, publish the config (see below) and set the `users` value.
+### Users
+By default, rapid login buttons for first 3 users from dabatase will be displayed.
+You can set the users in `.env` file, but if you want to set the users in a more clean format, publish the config (see below) and set the `users` value.
 
 `key` is the user's `id` in database, and `value` is displayed in the button
 
