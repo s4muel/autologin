@@ -30,5 +30,8 @@ return [
     'user_route_key_name' => env('RAPIDLOGIN_USER_ROUTE_KEY_NAME', 'id'),
 
     // Examples: 'login', 'login*', etc. Defaults to '*' to match all routes.
+    // Separate multiple route names with a comma.
     'route_name_pattern' => env('RAPIDLOGIN_ROUTE_NAME_PATTERN', '*'),
+    // Negative pattern for route names, if a route matches this pattern, it will not be injected.
+    'route_name_negative_pattern' => env('RAPIDLOGIN_ROUTE_NAME_NEGATIVE_PATTERN', ''),
 ];

@@ -41,7 +41,8 @@ class InjectRapidLogin
             });
         }
 
-        if ($request->routeIs(config('rapidlogin.route_name_pattern'))) {
+        if ($request->routeIs(str(config('rapidlogin.route_name_pattern'))->explode(','))
+            && !$request->routeIs(str(config('rapidlogin.route_name_negative_pattern'))->explode(','))) {
             $content = $response->getContent();
 
             $html = view('rapidlogin::links', [

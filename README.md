@@ -24,7 +24,7 @@ RAPIDLOGIN_ENABLED=true
 #RAPIDLOGIN_HOME_ROUTE_NAME=home
 
 #to define the routes on which the buttons are displayed
-#examples: 'login', 'login*', ... defaults to '*' to match all routes
+#examples: 'login', 'login*', ... defaults to '*' to match all routes. Separate multiple route names with a comma.
 #RAPIDLOGIN_ROUTE_NAME_PATTERN='*'
 ```
 
