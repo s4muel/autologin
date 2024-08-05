@@ -6,6 +6,7 @@ use App\Models\User;
 use Closure;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class InjectRapidLogin
 {
@@ -48,8 +49,8 @@ class InjectRapidLogin
                 'showCloseButton' => config('rapidlogin.show_close_button', true),
             ])->render();
 
-            $content = str_replace('</body>', $html . '</body>', $content);
 
+            $content = Str::replaceLast('</body>', $html . '</body>', $content);
             $response->setContent($content);
         }
 
