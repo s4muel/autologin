@@ -15,7 +15,7 @@ RAPIDLOGIN_ENABLED=true
 
 #to define the users that will be displayed in the buttons (see Users section below)
 #the format is `id:name,id:name,...`
-#RAPIDLOGIN_USERS=1:John Doe,1337:Jane Doe
+#RAPIDLOGIN_USERS="1:John Doe,1337:Jane Doe"
 
 #set to false to hide the close button from the panel
 #RAPIDLOGIN_SHOW_CLOSE_BUTTON=true
