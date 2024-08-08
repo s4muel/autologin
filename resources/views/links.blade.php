@@ -2,7 +2,7 @@
     @foreach($users as $userId => $userName)
         <a
             href="{{ route('rapidlogin.login', ['user' => $userId]) }}"
-            style="display: inline-block; padding: 0.25rem 0.5rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; color: #fff; background-color: #6c757d; text-align: center; vertical-align: middle; user-select: none; font-weight: 400;"
+            style="display: inline-block; padding: 0.25rem 0.5rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; color: #fff; background-color: #6c757d; text-align: center; vertical-align: middle; user-select: none; font-weight: 400; text-decoration: none;"
         >
             {{ $userName }}
         </a>

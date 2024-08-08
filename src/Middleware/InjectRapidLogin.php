@@ -14,7 +14,8 @@ class InjectRapidLogin
     {
         $response = $next($request);
 
-        if (!config('rapidlogin.enabled', false)) {
+        //skip when disabled or running tests
+        if (!config('rapidlogin.enabled', false) || app()->runningUnitTests()) {
             return $response;
         }
 
